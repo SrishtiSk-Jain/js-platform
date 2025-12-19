@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -69,13 +69,12 @@ button:focus-visible {
   }
 }
 
-
 /* Custom base styles */
 @layer base {
   body {
     @apply bg-gray-50 text-gray-900;
   }
-  
+
   button {
     @apply transition-colors duration-200;
   }
@@ -84,20 +83,20 @@ button:focus-visible {
 /* Custom components */
 @layer components {
   .page-layout {
-    @apply min-h-screen flex flex-col;
+    @apply flex min-h-screen flex-col;
   }
-  
+
   .section {
-    @apply py-8 px-4 md:px-8;
+    @apply px-4 py-8 md:px-8;
   }
-  
+
   /* Form styles (built-in with v4) */
   .form-input {
     @apply rounded-lg border border-gray-300 px-4 py-2 text-base transition-colors;
   }
-  
+
   .form-input:focus {
-    @apply border-blue-500 outline-none ring-2 ring-blue-500 ring-offset-2;
+    @apply border-blue-500 ring-2 ring-blue-500 ring-offset-2 outline-none;
   }
 }
 
@@ -107,7 +106,7 @@ button:focus-visible {
   --color-primary-500: #0ea5e9;
   --color-primary-600: #0284c7;
   --color-primary-700: #0369a1;
-  
+
   --color-success: #10b981;
   --color-warning: #f59e0b;
   --color-error: #ef4444;
