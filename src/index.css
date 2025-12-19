@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -65,4 +67,48 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+/* Custom base styles */
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+  
+  button {
+    @apply transition-colors duration-200;
+  }
+}
+
+/* Custom components */
+@layer components {
+  .page-layout {
+    @apply min-h-screen flex flex-col;
+  }
+  
+  .section {
+    @apply py-8 px-4 md:px-8;
+  }
+  
+  /* Form styles (built-in with v4) */
+  .form-input {
+    @apply rounded-lg border border-gray-300 px-4 py-2 text-base transition-colors;
+  }
+  
+  .form-input:focus {
+    @apply border-blue-500 outline-none ring-2 ring-blue-500 ring-offset-2;
+  }
+}
+
+/* Custom theme extensions (v4 CSS-first approach) */
+@theme {
+  --color-primary-50: #f0f9ff;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
 }
