@@ -24,6 +24,10 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Optional: Download build artifacts from previous job
+      # - name: Download artifacts
+      #   uses: actions/download-artifact@v4
+
       # Add your deployment step here
       # Example: Deploy to Vercel, Netlify, AWS, etc.
       - name: Build complete
